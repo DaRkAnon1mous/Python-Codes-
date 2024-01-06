@@ -1,1 +1,1 @@
-Find a factorial number 
+Find a factorial of a number by calling a function 
