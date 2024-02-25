@@ -1,25 +1,21 @@
 def hillvalley(l):
+    """
+    Returns True if the list l is a hill or a valley, and False otherwise.
+    """
     if len(l) < 4:
         return False
 
-    increasing = decreasing = False
+    # Check for ascending sequence followed by descending sequence
+    for i in range(1, len(l) - 2):
+        if l[i] < l[i + 1] and l[i + 1] > l[i + 2]:
+            return True
 
-    # Check for an ascending sequence
-    for i in range(1, len(l)):
-        if l[i] > l[i - 1]:
-            increasing = True
-        elif l[i] < l[i - 1]:
-            break
+    # Check for descending sequence followed by ascending sequence
+    for i in range(1, len(l) - 2):
+        if l[i] > l[i + 1] and l[i + 1] < l[i + 2]:
+            return True
 
-    # Check for a descending sequence
-    for i in range(len(l) - 1, 0, -1):
-        if l[i] > l[i - 1]:
-            break
-        elif l[i] < l[i - 1]:
-            decreasing = True
-
-    return increasing and decreasing
-
+    return False
 
 # Test cases
 print(hillvalley([1, 2, 3, 5, 4]))  # Expected: True
