@@ -1,4 +1,4 @@
-## Memoization Approach:
+## Memoization Approach  (Time Limit Exceed):
 class Solution:
     def tribonacci(self, n: int) -> int:
         arr= {0:0,1:1,2:1}
