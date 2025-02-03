@@ -1,4 +1,4 @@
-## Tabulation Approach T=O(n) S=O(1) best optimised
+## Tabulation Approach T=O(n) S=O(1) best time and space optimized
 class Solution:
     def tribonacci(self, n: int) -> int:
         f0 = 0
